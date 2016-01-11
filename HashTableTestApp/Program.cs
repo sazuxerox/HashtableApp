@@ -60,6 +60,17 @@ namespace HashTableTestApp
             if (!(value2 is string)) return;
             Console.WriteLine("is string");
             Console.WriteLine(value2);
+
+            //counting the number of elements in the hashtable
+            int count = hashtable.Count;
+            Console.WriteLine("Number of elements in the hashtable : {0}", count);
+
+            //clear the hashtable
+            hashtable.Clear();
+            //again count the hashtable element
+            count = hashtable.Count;
+            Console.WriteLine("Number of elements in the hash after clearing : {0}", count);
+            Console.ReadKey();
         }
     }
 }
