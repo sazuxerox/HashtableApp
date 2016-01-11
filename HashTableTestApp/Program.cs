@@ -47,6 +47,19 @@ namespace HashTableTestApp
             {
                 Console.WriteLine(k + ": " + hashtable[k]);
             }
+            //mixing key values with different types
+            hashtable.Add(400, "Blazer");
+            //casting the key value as string
+            var value1 = hashtable[400] as string;
+            if (value1 != null)
+            {
+                Console.WriteLine(value1);
+            }
+            //using object
+            object value2 = hashtable[400];
+            if (!(value2 is string)) return;
+            Console.WriteLine("is string");
+            Console.WriteLine(value2);
         }
     }
 }
